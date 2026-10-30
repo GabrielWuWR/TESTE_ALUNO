@@ -1,0 +1,30 @@
+.containerBotaoAcessoRapido {
+  cursor: pointer;
+  width: 2rem;
+  height: 4rem;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 10;
+  transform: translate(0, -50%);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.containerBotaoAcessoRapido img {
+  width: 40%;
+  transition: transform 0.4s ease;
+}
+
+.containerBotaoAcessoRapido.ativo {
+  border-radius: 20px;
+  transform: translate(-17rem, -50%);
+}
+
+.containerBotaoAcessoRapido.ativo img {
+  transform: rotate(180deg);
+}

@@ -1,0 +1,93 @@
+.containerNoticia {
+  width: 100%;
+  height: 7rem;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.fotoNoticia {
+  width: 5rem;
+  height: 5rem;
+  aspect-ratio: 1/1;
+  border: 2px solid var(--branco);
+  border-radius: 18px;
+  box-shadow: 0px 0px 2.9px 2px rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.conteudoNoticia {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+  min-width: 0; 
+}
+
+.cimaNoticia {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.nomeInstituicao {
+  background: #739f86;
+  backdrop-filter: blur(16px) saturate(1.5) brightness(1.1);
+  -webkit-backdrop-filter: blur(16px) saturate(1.5) brightness(1.1);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.15),
+    inset 3px 3px 4px rgba(255, 255, 255, 0.2),
+    inset 0 0 8px rgba(255, 255, 255, 0.2),
+    0 8px 12px -4px rgba(0, 0, 0, 0.1);
+  transform: translateZ(0);
+  will-change: transform, backdrop-filter;
+  padding: 0.15rem 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  flex-shrink: 0; 
+  max-width: none; 
+}
+
+.nomeInstituicao p {
+  font-size: 0.75rem;
+  color: var(--branco);
+  -webkit-text-stroke: 0.5px var(--branco);
+  white-space: nowrap; 
+}
+
+.dataNoticia {
+  font-size: 0.8rem;
+  color: var(--cinza);
+  -webkit-text-stroke: 0.1px var(--cinza);
+  flex-shrink: 0; 
+  white-space: nowrap; 
+}
+
+.noticiaNome {
+  font-size: 1.1rem;
+  color: var(--textoEscuro);
+  -webkit-text-stroke: 0.4px var(--textoEscuro);
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.setaNoticia {
+  width: 0.6rem;
+  height: auto;
+  flex-shrink: 0;
+  transform: rotate(-180deg);
+  opacity: 0.6;
+  margin-left: auto; 
+}

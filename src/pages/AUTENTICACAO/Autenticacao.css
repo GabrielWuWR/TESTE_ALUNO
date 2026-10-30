@@ -1,0 +1,326 @@
+.paginaAutenticar {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  align-items: center;
+  padding: 3%;
+  padding-left: 6%;
+  position: relative;
+}
+
+.videoFundo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.containerLogin,
+.containerCadastro {
+  width: 44rem;
+  height: 80vh;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.5rem 3rem 2.5rem 3rem;
+  box-sizing: border-box;
+  transition: height 0.4s ease, width 0.4s ease;
+}
+
+.conteudoCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cabecalhoAut {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem; 
+}
+
+.cabecalhoAut h1 {
+  font-size: 2.2rem;
+}
+
+.cabecalhoAut p {
+  color: var(--cinza);
+  -webkit-text-stroke: 0.8px;
+  font-size: 1.4rem;
+}
+
+.containerInputsLogin,
+.containerInputsCadastro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.containerInputsLogin.relativo {
+  position: relative;
+}
+
+.linhaInputs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem; 
+}
+
+.linhaInputs > div {
+  flex: 1;
+  min-width: 0; 
+}
+
+.linhaInputs input {
+  padding-right: 2.5rem; 
+  font-size: 0.9rem; 
+}
+
+.mensagemErro {
+  width: 100%;
+  text-align: center;
+  color: #ff4d4d;
+  font-size: 1.1rem;
+  -webkit-text-stroke: 0.7px #ff4d4d;
+}
+
+.blocoMensagemErro {
+  width: 100%;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem 0;
+}
+
+.botaoLogin,
+.botaoCadastrar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 0px; 
+  border-radius: 25px;
+  color: var(--branco);
+  cursor: pointer;
+  margin-top: 0;
+}
+
+.botaoCadastrar h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: inherit;
+  -webkit-text-stroke: 1px var(--branco);
+}
+
+.esqueceuSenha {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+  z-index: 2; 
+}
+
+.esqueceuSenha p {
+  font-size: 1.2rem;
+  -webkit-text-stroke: 0.01px;
+  color: var(--textoEscuro);
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+.esqueceuSenha p::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--textoEscuro);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-out;
+}
+
+.esqueceuSenha p:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.containerRedes {
+  width: 100%;
+  display: flex;
+  gap: 0.85rem;
+  margin-top: 1.5rem; 
+}
+
+.containerRede {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.75rem 1.2rem;
+  min-height: 3.4rem;
+  border-radius: 100px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.iconeRede {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconeRede img {
+  width: 1.8rem;
+  height: 1.8rem;
+  object-fit: contain;
+  display: block;
+}
+
+.containerRede h1 {
+  font-size: 1.15rem;
+  margin: 0;
+  color: var(--textoEscuro);
+  -webkit-text-stroke: 0.2px;
+  white-space: nowrap;
+}
+
+.rodapeCard {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem; 
+}
+
+.criarConta {
+  margin-top: 0.5rem;
+}
+
+.criarConta h1 {
+  color: var(--textoEscuro);
+  font-size: 1.4rem;
+  display: flex;
+  gap: .5rem;
+}
+
+.criarConta span {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+.criarConta span::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--textoEscuro);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-out;
+}
+
+.criarConta span:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.containerLogo {
+  width: 100%;
+  height: 5rem;
+}
+
+.textoCabecalho {
+  text-align: center;
+}
+
+.botaoVoltar {
+  cursor: pointer;
+}
+
+.botaoVoltar img {
+  width: 90%;
+}
+
+.containerVoltar {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.botaoEnviar {
+  width: 100%;
+  height: 4.5rem;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--branco);
+  cursor: pointer;
+  margin-top: 5rem;
+}
+
+.cardEsqueciSenha {
+  height: 100%;
+}
+
+.inputEmail {
+  margin-top: 4rem;
+}
+
+.cabecalhoAut h2 {
+  margin-top: 1rem;
+  -webkit-text-stroke: .5px transparent;
+}
+
+.containerCodigo {
+  margin-top: 2rem;
+}
+
+.containerCodigo h3 {
+  font-size: 1.8rem;
+}
+
+.botaoVerificar {
+  width: 100%;
+  height: 5.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--branco);
+  margin-top: 4rem;
+}
+
+.contaienerInputsNovaSenha {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 4rem;
+}

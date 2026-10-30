@@ -1,0 +1,76 @@
+.containerBotao {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    z-index: 10;
+}
+
+.containerBotao img {
+    width: 45%;
+    position: relative;
+    z-index: 2;
+    transition: transform .3s;
+}
+
+.containerBotao::before {
+    content: "";
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #6a8e4dda 0%, #6a8e4dc9 100%);
+    z-index: 1;
+    box-shadow:
+        0px 30px 60px 0px rgba(0, 0, 0, 0.26),
+        4px 22px 45px 0px rgba(0, 0, 0, 0.178),
+        inset 0px 0px 13.6px 9px #b7cf91af;
+
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.containerBotao.mostrar-balao img {
+    transform: scale(0.7);
+}
+
+.containerBotao.mostrar-balao::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.menuDiferente {
+    width: 70%;
+    aspect-ratio: 1 / 1;
+    border-radius: 1vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #2C3D23 0%, #2c3d237c 100%);
+    backdrop-filter: blur(13px);
+    box-shadow:
+        0px 30px 60px 0px rgba(0, 0, 0, 0.26),
+        4px 22px 45px 0px rgba(0, 0, 0, 0.178),
+        inset 0px 0px 7px 4px #19201359;
+    border: 1px solid transparent;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.menuDiferente.ativo {
+    background: linear-gradient(180deg, #384f30 0%, #384f309c 100%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+      0px 10px 20px 0px rgba(0, 0, 0, 0.4),
+      inset 0px 0px 12px rgba(255, 255, 255, 0.15);
+    transform: scale(0.92);
+}
+
+.menuDiferente img {
+    width: 50%;
+}

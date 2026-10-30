@@ -1,0 +1,46 @@
+.containerBotaoSOS {
+    height: 100%;
+    width: 28vw;
+    padding: 1.2rem 1rem;
+}
+
+.botaoSOS {
+    border-radius: 28px;
+
+    background: linear-gradient(135deg,
+            #CE5656 0%,
+            rgba(206, 86, 86, 0.5) 100%);
+
+    backdrop-filter: blur(3px) url(#lg-filter) blur(6px) saturate(1.5) brightness(1.1);
+    -webkit-backdrop-filter: blur(24px) saturate(1.8) brightness(1.15) contrast(1.05);
+
+    box-shadow:
+        inset 0 0 27px 24px #F16E6D,
+        inset 0 0 0 1px rgba(255, 255, 255, 0.15),
+        inset 1.5px 1.5px 0 rgba(255, 255, 255, 0.5),
+        inset 0 0 12px rgba(255, 255, 255, 0.2),
+        0 16px 24px -6px rgba(0, 0, 0, 0.18);
+
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 1rem;
+
+    color: var(--branco);
+}
+
+.botaoSOS h1 {
+    -webkit-text-stroke: 0.5px var(--branco);
+}
+
+.botaoSOS p {
+    -webkit-text-stroke: 0.4px var(--branco);
+    font-size: 1rem;
+}
+
+.botaoSOS img:first-child {
+    width: 26%;
+}

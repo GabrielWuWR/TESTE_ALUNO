@@ -1,0 +1,258 @@
+.overlayLiquidTransicao {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: all;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.28) 0%,
+    rgba(235, 250, 230, 0.22) 60%,
+    rgba(210, 240, 205, 0.32) 100%
+  );
+  perspective: 1200px;
+}
+
+.vinhetaCinematografica {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at center,
+    transparent 45%,
+    rgba(20, 45, 22, 0.18) 100%
+  );
+  z-index: 1;
+}
+
+.feixesLuzContainer {
+  position: absolute;
+  inset: -30%;
+  pointer-events: none;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.feixeSolar {
+  width: 18vw;
+  height: 160vh;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 230, 0.45) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  filter: blur(28px);
+  transform: rotate(-24deg);
+}
+
+.feixeSolar.feixe2 {
+  width: 26vw;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(210, 255, 170, 0.42) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.feixeSolar.feixe3 {
+  width: 14vw;
+  opacity: 0.75;
+}
+
+.svgCiposMoldura {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+  filter: drop-shadow(0 0 14px rgba(184, 242, 114, 0.65));
+}
+
+.anelOndaLiquid {
+  position: absolute;
+  width: 34vw;
+  height: 34vw;
+  border-radius: 50%;
+  border: 2.5px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    0 0 50px rgba(255, 255, 255, 0.75),
+    inset 0 0 35px rgba(168, 224, 99, 0.45);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.anelOndaLiquid.secundario {
+  border-width: 1.5px;
+  border-color: rgba(184, 242, 114, 0.75);
+}
+
+.grandeElementoFlorWrapper {
+  position: absolute;
+  width: 44rem;
+  height: 44rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 4;
+  filter: drop-shadow(0 20px 45px rgba(30, 80, 35, 0.18));
+}
+
+.svgGrandeFlorBloom {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.particulaLuzBloom {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow:
+    0 0 12px 3px rgba(255, 255, 255, 0.9),
+    0 0 24px 6px rgba(130, 210, 110, 0.55);
+  pointer-events: none;
+  z-index: 4;
+}
+
+.bolhaGrandeLiquid {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 28% 28%,
+    rgba(255, 255, 255, 0.92) 0%,
+    rgba(255, 255, 255, 0.25) 24%,
+    rgba(140, 220, 130, 0.15) 62%,
+    rgba(255, 255, 255, 0.75) 100%
+  );
+  border: 1.5px solid rgba(255, 255, 255, 0.75);
+  box-shadow:
+    inset 0 0 18px rgba(255, 255, 255, 0.85),
+    0 10px 25px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+  z-index: 4;
+}
+
+.folhaArvoreWrapper {
+  position: absolute;
+  transform-style: preserve-3d;
+  filter: drop-shadow(0 14px 18px rgba(20, 50, 25, 0.18));
+  pointer-events: none;
+  z-index: 5;
+}
+
+.svgFolhaGrande {
+  width: 100%;
+  height: 100%;
+}
+
+.palcoTextoTransicao {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.blocoFraseAnimada {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 1.5rem 3rem;
+}
+
+.haloContrasteFundo {
+  position: absolute;
+  inset: -25% -30%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.94) 0%,
+    rgba(255, 255, 255, 0.68) 48%,
+    rgba(255, 255, 255, 0) 76%
+  );
+  filter: blur(22px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.linhaPalavrasSaudacao {
+  display: flex;
+  gap: 1.15rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  perspective: 900px;
+}
+
+.palavraSaudacaoSite {
+  font-size: 4.4rem;
+  display: inline-block;
+  -webkit-text-stroke: 1.2px var(--textoEscuro);
+  filter: drop-shadow(0 2px 12px rgba(255, 255, 255, 0.98))
+    drop-shadow(0 8px 24px rgba(255, 255, 255, 0.9));
+}
+
+.linhaPalavrasMenores {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.palavraBemVindo {
+  font-size: 2.4rem;
+  color: var(--cinza);
+  -webkit-text-stroke: 0.8px var(--cinza);
+  text-shadow:
+    0 2px 12px rgba(255, 255, 255, 0.98),
+    0 6px 20px rgba(255, 255, 255, 0.95);
+}
+
+.containerPalavraBloomRelativo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.25rem;
+}
+
+.linhaPalavraBloom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.letraDestaqueBloomSite {
+  font-size: 6.4rem;
+  display: inline-block;
+  -webkit-text-stroke: 1.5px var(--textoEscuro);
+  filter: drop-shadow(0 2px 14px rgba(255, 255, 255, 0.98))
+    drop-shadow(0 12px 30px rgba(46, 125, 50, 0.35));
+}
+
+.particulaFolhaBurst {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px 14px 2px 14px;
+  background: linear-gradient(135deg, #b8f272, #435f3f);
+  box-shadow: 0 0 12px rgba(86, 171, 47, 0.6);
+  pointer-events: none;
+}

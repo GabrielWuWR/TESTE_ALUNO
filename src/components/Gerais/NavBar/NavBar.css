@@ -1,0 +1,103 @@
+:root {
+  --backgroundMenu: #2B4326;
+  --mask-y-center: 0px;
+  --mask-offset-x: 0px;
+  --anim-speed: 0.35s;
+}
+
+.containerNav {
+  width: 106px;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vw 0px;
+  z-index: 1;
+}
+
+.navVisual {
+  position: absolute;
+  inset: 0;
+  border-radius: 2.4vh;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-mask-image: linear-gradient(white, white), var(--svg-mask);
+  mask-image: linear-gradient(white, white), var(--svg-mask);
+  -webkit-mask-size: 100% 100%, 106px 139px;
+  mask-size: 100% 100%, 106px 139px;
+  -webkit-mask-position: 0 0, var(--mask-offset-x) calc(var(--mask-y-center) - 69.5px);
+  mask-position: 0 0, var(--mask-offset-x) calc(var(--mask-y-center) - 69.5px);
+  -webkit-mask-repeat: no-repeat, no-repeat;
+  mask-repeat: no-repeat, no-repeat;
+  -webkit-mask-composite: destination-out;
+  mask-composite: subtract;
+  transition: mask-position var(--anim-speed) cubic-bezier(0.25, 1, 0.5, 1),
+    -webkit-mask-position var(--anim-speed) cubic-bezier(0.25, 1, 0.5, 1),
+    opacity 0.4s ease;
+}
+
+.navBackground {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #2b4326d0 0%, #2b4326b9 100%);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  transform: translateZ(0);
+  box-shadow:
+    0px 30px 60px 0px rgba(0, 0, 0, 0.26),
+    4px 22px 45px 0px rgba(0, 0, 0, 0.308),
+    inset 2px 6px 10px 0px rgba(109, 141, 75, 0.63);
+}
+
+.navBorder {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.219) 0%, rgba(255, 255, 255, 0.05) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.bordaWrapper {
+  position: absolute;
+  inset: 0;
+  border-radius: 2.4vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.4s ease;
+}
+
+.esconder-mascara {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cutoutBorder {
+  position: absolute;
+  top: calc(var(--mask-y-center) - 69.5px);
+  left: 0;
+  transform: translateX(var(--mask-offset-x));
+  transition: transform var(--anim-speed) cubic-bezier(0.25, 1, 0.5, 1),
+    top var(--anim-speed) cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.containersBotoes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+}
+
+.headerContainer {
+    height: 135px;
+    display: flex;
+    gap: 2vw;
+}
